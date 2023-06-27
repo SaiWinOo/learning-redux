@@ -1,24 +1,15 @@
 import {useState} from "react";
-import {useDispatch} from "react-redux";
-import {addPost} from "./postSlice.jsx";
-import {nanoid} from "@reduxjs/toolkit";
 
 const Form = () => {
     const [title, setTitle] = useState('');
     const [body , setBody] = useState('');
 
 
-    const dispatch = useDispatch();
 
     const canSave = Boolean(title) && Boolean(body);
 
     const submit = (e) => {
         e.preventDefault();
-        dispatch(addPost({
-            id : nanoid(),
-            title,
-            body
-        }))
     }
 
     return (
