@@ -1,10 +1,12 @@
-import Counter from "./store/features/counter.jsx";
+import Form from "./store/features/posts/form.jsx";
+import PostList from "./store/features/posts/PostList.jsx";
 
 const App = () => {
 
     return (
         <div>
-            <Counter/>
+            <Form/>
+            <PostList/>
         </div>
     );
 };
